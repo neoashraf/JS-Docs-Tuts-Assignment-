@@ -1,0 +1,57 @@
+ASSIGNMENT 
+Take input from HTML text area, solve this problem on JS, Show it appropriately on HTML. Style it well to look good.
+
+
+
+Input:
+3
+5
+0 1 1 "message...."
+1 2 1 "message...."
+2 3 1 "message...."
+1 4 2 "message...."
+0 5 2 "message...."
+2
+0 1 1 "message...."
+1 2 2 "message...."
+1
+0 1 1 "message...."
+
+Output:
+5 "message...."
+1 "message...."
+- 4 "message...."
+- 2 "message...."
+-- 3 "message...."
+
+==========
+1 "message...."
+- 2 "message...."
+
+==========
+1 "message...."
+
+
+
+
+
+Input:
+Input starts with an integer t = total test cases (1<t<=50), 
+Each test case starts with an integer n = total number of comments (1<n<=10000),
+Each comment starts with three integers, c = the index of its parent(0<=i<n-2), i = its own index(1<=i<=n), p = priority of the comment(1<=p<=100000), then followed by a string m = comment
+
+Output:
+It'll obviously starts with the comment that has parent index 0 BUT there are 3 rules:
+	1. Comments with the same parent index has to be sort out by their priority value and with the highest priority will show first.
+	2. If some comments have same priority and same parent index then it has to be sorted out by their index. Comments with lower index value will show first.
+	3. After showing a comment if it has child comments then the child comments will show by following these three rules and repeat.
+
+Now for each comment output at first put some '-' regarding the depth of the comment, then the comment's index and followed by the comment
+
+Each test casses will be separated by 10 '='. 
+
+
+
+
+
+--Jubayer

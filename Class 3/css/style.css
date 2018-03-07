@@ -1,0 +1,12 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+/*[attribute]*/
+
+#demo-id{
+    margin-bottom:100px;
+}
+
+body h2:first-child{
+    text-align: center;
+}

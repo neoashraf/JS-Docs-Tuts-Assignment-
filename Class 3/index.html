@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJs Basic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-cloak ng-controller="rootController as root" >
+    <!--<form ng-controller="UserRegistrationController" ng-submit="save()">-->
+        <!--<label>Username: </label>-->
+        <!--<input id="username" ng-model="userName" type="text"/>-->
+        <!--<input  type="submit" ng-click="alert1(userName)" value="Save">-->
+    <!--</form>-->
+    <!--<div>{{metoad()}}</div>-->
+    <!--<div ng-bind="userName"></div>-->
+
+    <!--<div>-->
+        <!--<button ng-click="clickMe($event)">Click Me</button>-->
+        <!--<p id="one-time-binding-example">One time binding: {{::name}}</p>-->
+        <!--<p id="one-time-binding-example2">One time binding: {{::returnName('from single bind')}}</p>-->
+        <!--<p id="normal-binding-example">Normal binding: {{name}}</p>-->
+        <!--<p id="normal-binding-example2">Normal binding: {{returnName('from normal bind')}}</p>-->
+    <!--</div>-->
+
+    <!--<div>-->
+        <!--&lt;!&ndash;<input type="text" ng-model="message"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<h1>{{message}}</h1>&ndash;&gt;-->
+        <!--<input type="text" ng-model="data.message"/>-->
+        <!--<h1>{{data.message}}</h1>-->
+    <!--</div>-->
+    <!--<div ng-controller="firstController">-->
+        <!--&lt;!&ndash;<input type="text" ng-model="message"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<h1>{{message}}</h1>&ndash;&gt;-->
+        <!--<input type="text" ng-model="data.message"/>-->
+        <!--<h1>{{data.message}}</h1>-->
+    <!--</div>-->
+    <!--<div ng-controller="secondController">-->
+        <!--&lt;!&ndash;<input type="text" ng-model="message"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<h1>{{message}}</h1>&ndash;&gt;-->
+        <!--<input type="text" ng-model="data.message"/>-->
+        <!--<h1>{{data.message}}</h1>-->
+    <!--</div>-->
+
+    <!--<div>-->
+        <!--<button ng-click="root.aMethod()">This test</button>-->
+        <!--<button ng-click="aMethod()">Scope test</button>-->
+    <!--</div>-->
+
+    <!--//some directives-->
+    <div><button ng-click="changeValue()">Show/Hide</button></div>
+    <div ng-show="showDiv"> This is a show directive </div>
+    <div ng-hide="showDiv"> This is a hide directive </div>
+
+    <div ng-if="showDiv"> Show in dom
+        <img ng-src="{{showDiv && 'https://angularjs.org/img/AngularJS-large.png' || 'https://angularjs.org/sdfsdf'}}">
+    </div>
+
+
+    <!-- ng-repeat-->
+    <div>
+        <input type="number" ng-model="currentValue">
+        <button type="submit" ng-click="addNumbertoList(currentValue)">Add number to list</button>
+        <ul>
+            <li ng-repeat="item in aList track by $index">{{'['+$index+']'}} {{item}} {{$first && '(first element)' || $last && '(last element)' || ''}}</li>
+        </ul>
+    </div>
+
+    <script src="lib/angular.js"></script>
+    <script src="js/basic.js"></script>
+</body>
+</html>

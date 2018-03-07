@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic frontend development</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<h2>Class 2</h2>
+<h2>Basic JavaScript</h2>
+<ul>
+    <li>Object :: Object, Array, String, Number, Function, null, undefined</li>
+    <li>Functions and Functional programming nature:
+        <ul>
+            <li>Function Declarkations</li>
+            <li>Passing Arguments (pass by value and reference)</li>
+            <li>Functional programming and Closure</li>
+            <li>Factory Functions and Simple Factory Constructor(Class) Pattern</li>
+            <li>Self-Invoking Functions and Simple Module Pattern</li>
+        </ul>
+    </li>
+    <li>OOP in JavaScript:
+        <ul>
+            <li>This</li>
+            <li>Constructor function(Classes)</li>
+            <li>Simple Prototype Inheritance Pattern</li>
+        </ul>
+    </li>
+</ul>
+<h2>DOM Manipulation</h2>
+<ul>
+    <li>Everything basic</li>
+</ul>
+
+<div id="demo-id" onclick="bubbledClick(event)">
+    <div class="demo-class">
+        <p>P for class one</p>
+    </div>
+    <div class="demo-class2">
+        <p>P for class two</p>
+        <a>A link</a>
+    </div>
+    <div class="demo-class3"></div>
+
+    <div>
+        <h3>DOM Events</h3>
+        <div >Status: <span id="input-text"></span></div>
+        <div>
+            <!-- In HTML-->
+            <label>In HTML</label>
+            <input type="text" onfocus="inputFocused(event)" onblur="inputBlurred(event)" onchange="inputChanged(event)">
+        </div>
+        <div>
+            <!-- In JS-->
+            <label>In JS</label>
+            <input type="text" id="dom-event-js">
+        </div>
+        <div>
+            <!-- In JS using addEventListener-->
+            <label>In JS with eventListener</label>
+            <input type="text" id="dom-event-js-listener">
+        </div>
+        <div>
+            <button id="for-custom-event" onclick="itsClicked(event)">Custom Event</button>
+        </div>
+    </div>
+
+
+    <div>
+        <!-- Get and set-->
+        <div>
+            <textarea id="text-area"></textarea>
+            <button onclick="getTextAreaContent()">Get content</button>
+        </div>
+        <div id="set-text"></div>
+    </div>
+
+</div>
+<!--<script src="/Basic Frontend Class/class-2-Basic JavaScript and DOM Manipulation/app/js/basic.js"></script>-->
+<script src="js/basic.js" ></script>
+</body>
+</html>

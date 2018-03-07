@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="angularApp" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Javascript: Road to AngularJS</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller="rootCtrl" ng-cloak>
+
+
+<h2>
+    AngularJS Services and Directives
+</h2>
+<h2>Class 4</h2>
+<h2>Jubayer Al Farabi</h2>
+
+
+<h3>Service, Factory, Value, Filter</h3>
+
+<h3>Directives</h3>
+<ul>
+    <li>
+        Custom Directives: adding template, restrictions, replace, link
+    </li>
+    <li>
+        Custom Directives Scope: Shared Scope, Inherited Scope ,Isolated Scope
+    </li>
+    <li>
+        Isolated Scope: @, = , &
+    </li>
+    <li>
+        Custom Directives: Transclude, priority
+    </li>
+</ul>
+
+<div>Name: {{person.name}}</div>
+<div ng-init="showButton=true"  ng-controller="mainCtrl">
+
+
+    <!--<div ng-if="showButton">-->
+        <!--<br/>Hello <input ng-model='person.name'> <hr/>-->
+        <!--<span ng-bind="::person.name"></span> <br/> &lt;!&ndash; single bind &ndash;&gt;-->
+        <!--<span ng:bind="person.name"></span> <br/>-->
+        <!--<span ng_bind="person.name"></span> <br/>-->
+        <!--<span data-ng-bind="person.name"></span> <br/>-->
+        <!--<span x-ng-bind="person.name"></span> <br/>-->
+    <!--</div>-->
+
+
+    <!--<my-custom-directive student-type="{{person.name}}" personItem="person"></my-custom-directive>-->
+    <!--<my-custom-directive></my-custom-directive>-->
+    <!--<my-custom-directive></my-custom-directive>-->
+    <!--<my-custom-directive></my-custom-directive>-->
+    <!--<div class="textt" my-custom-directive> sdfsdfsdffsd</div>-->
+    <!--<div class="my-custom-directive"></div>-->
+    <!-- directive: my-custom-directive -->
+
+
+    <!--<my-custom-directive person-data="person" otherperson="person2" student-type="{{studentType}}"></my-custom-directive>-->
+    <!--<my-custom-directive person-data="person"></my-custom-directive>-->
+    <!--<my-custom-directive person-data="person"></my-custom-directive>-->
+
+
+    <!--<div>-->
+        <!--<ul>-->
+            <!--<li ng-repeat="person in mainData.personList track by $index">-->
+                <!--<div><label>Name: </label>{{person.name}}</div>-->
+                <!--<div><label>Email: </label>{{person.email}}</div>-->
+                <!--<div><button ng-click="deletePerson($index);">Delete</button></div>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+
+    <!--<div person-add addfn="addNewPerson(o)">-->
+        <!--sdfsdfsd sdf sdf sdf sd-->
+    <!--</div>-->
+    <!--<div person-add addfn="addNewPerson(o)">-->
+    <!--</div>    <div person-add addfn="addNewPerson(o)">-->
+    <!--</div>    <div person-add addfn="addNewPerson(o)">-->
+    <!--</div>    <div person-add addfn="addNewPerson(o)">-->
+    <!--</div>    <div person-add addfn="addNewPerson(o)">-->
+    <!--</div>    <div person-add addfn="addNewPerson(o)">-->
+    <!--</div>    <div person-add addfn="addNewPerson(o)">-->
+    <!--</div>-->
+
+
+    <!--<my-custom-directive isn="name is {{person2.name}}" student-type="{{studentType}}" person-data="person2">-->
+    <!--<div> So {{person2.name}} is a {{studentType}}</div>-->
+
+    <!--</my-custom-directive>-->
+
+
+    <div customclick ng-click="methodFromCtrl()">
+        <a href="javascript:void(0)">Click here</a>
+    </div>
+
+    <!--<span>Filter</span>-->
+    <!--{{ 2|Double:8 }} and <span ng-bind="2|dbl:3"></span>-->
+</div>
+
+
+<script src="lib/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/directives/directives.js"></script>
+<script src="js/services/services.js"></script>
+<script src="js/services/person.js"></script>
+<script src="js/controllers/rootController.js"></script>
+<script src="js/controllers/mainController.js"></script>
+
+</body>
+</html>
