@@ -110,3 +110,44 @@ var x = function y (){
 	console.log(x);
 }
 console.log(x);
+
+// 
+function test(){
+	bar();
+	foo();
+	var foo = function (){
+		console.log("foo");
+	}
+	foo();
+	function bar(){
+		console.log("bar");
+	}
+}
+test();
+
+// 
+function test(){
+	var foo;
+	bar();
+	function bar(){
+		console.log("bar");
+	}
+	//foo();
+	foo = function (){
+		console.log("foo");
+	}
+	foo();
+}
+test();
+
+
+		var mA = [
+			{ op:’p’ , values:[0,1]},
+			{ op:’s’ , values:[1]},
+			{ op:’r’ , values:[]}
+		];
+
+		var obj1 = {
+			op : 'p',
+			values[0,1]
+		}
