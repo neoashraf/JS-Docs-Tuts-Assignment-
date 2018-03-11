@@ -140,14 +140,60 @@ function test(){
 }
 test();
 
+// Assignment code
 
-		var mA = [
-			{ op:’p’ , values:[0,1]},
-			{ op:’s’ , values:[1]},
-			{ op:’r’ , values:[]}
-		];
+intputObject  = {
+	n:5,
+	nA:[1,2,3,4,5],
+	m:3,
+	mA:[
+		{op:'s',values:[3]},
+		{op:'m',values:[2]},
+		{op:'d',values:[1]},
+		{op:'r',values:[]},
+		{op:'p',values:[2,3]}
+	]
+}
 
-		var obj1 = {
-			op : 'p',
-			values[0,1]
-		}
+
+function operation(){
+
+	var x,y,c,nAc = nA;
+
+	c = document.getElementById('operationInput');
+	if(c == 's'){
+		x = intputObject.mA[0].values[0];
+		for(var i = 0;i<nA.length;i++){
+			nA[i] += x; 
+		}	
+	}
+	else if(c == 'm'){
+		x = intputObject.mA[1].values[0];
+		for(var i = 0;i<nA.length;i++){
+			nA[i] *= x; 
+		}	
+	}
+	else if(c == 'd'){
+		x = intputObject.mA[2].values[0];
+		for(var i = 0;i<nA.length;i++){
+			nA[i] /= x; 
+		}	
+	} 
+	else if(c == 'r'){
+		for(i = nA.length - 1; i>=0 ;i++){
+			console.log(intputObject.nA[i]);
+		}	
+	}
+	else if(c == 'p'){
+		x = intputObject.mA[4].values[0];
+		y = intputObject.mA[4].values[1];
+		swap(intputObject.nA[x],intputObject.nA[y]);
+	}
+
+
+	console.log(nA);
+	nA = nAc;
+
+}
+
+

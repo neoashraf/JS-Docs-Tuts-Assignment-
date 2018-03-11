@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array simulation</title>
+</head>
+<body>
+	<form>
+		Operation Code:
+		<input id ="operationInput" type= "text" name="opCode" placeholder="s,m,d,r,p">
+	</form>
+	<button onclick="operation()">Generate Ans</button> 
+	<p id ="ans"></p>
+	<script>
+
+		function operation(){
+			var inputObject  = {
+				n:5,
+				nA:[1,2,3,4,5],
+				m:3,
+				mA:[
+					{op:'s',values:[3]},
+					{op:'m',values:[2]},
+					{op:'d',values:[1]},
+					{op:'r',values:[]},
+					{op:'p',values:[2,3]}
+				]
+			}
+
+			var x,y,i,nAc = inputObject.nA,c;
+			c = document.getElementById('operationInput').value;
+
+			if(c === 's'){
+				x = inputObject.mA[0].values[0];
+				for(i = 0;i<inputObject.nA.length;i++){
+					inputObject.nA[i] += x; 
+				}	
+			}
+			else if(c === 'm'){
+				x = inputObject.mA[1].values[0];
+				for(i = 0;i<inputObject.nA.length;i++){
+					inputObject.nA[i] *= x; 
+				}	
+			}
+			else if(c === 'd'){
+				x = inputObject.mA[2].values[0];
+				for(i = 0;i<inputObject.nA.length;i++){
+					inputObject.nA[i] /= x; 
+				}	
+			} 
+			else if(c === 'r'){
+				for(i = 0 , j = inputObject.nA.length - 1; i < j;i++,j--){
+					inputObject.nA[i] =  inputObject.nA[i] + inputObject.nA[j] ;
+					inputObject.nA[j] =  inputObject.nA[i] - inputObject.nA[j] ;
+					inputObject.nA[i] =  inputObject.nA[i] - inputObject.nA[j] ;
+				}	
+			}
+			else if(c === 'p'){
+				x = inputObject.mA[4].values[0];
+				y = inputObject.mA[4].values[1];
+				inputObject.nA[x] =  inputObject.nA[x] + inputObject.nA[y] ;
+				inputObject.nA[y] =  inputObject.nA[x] - inputObject.nA[y] ;
+				inputObject.nA[x] =  inputObject.nA[x] - inputObject.nA[y] ;
+			}
+
+			document.getElementById('ans').innerHTML = inputObject.nA;
+			//inputObject.nA = nAc;
+	
+		}
+		
+	</script>
+</body>
+</html>
